@@ -12,6 +12,8 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    const REGISTERED = 1;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -19,6 +21,13 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'telegram_id',
+        'first_name',
+        'username',
+        'phone',
+        'registered',
+        'actions',
+        'language',
         'email',
         'password',
     ];
@@ -39,6 +48,7 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
+        'actions' => 'array',
         'email_verified_at' => 'datetime',
     ];
 }

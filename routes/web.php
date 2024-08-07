@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('set/hook', [HookController::class, 'setHook']);
+Route::get('delete/hook', [HookController::class, 'deleteHook']);
+Route::post('hook-x628798uaysr', [HookController::class, 'hook']);
