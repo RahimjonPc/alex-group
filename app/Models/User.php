@@ -13,7 +13,8 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     const REGISTERED = 1;
-
+    const NOT_REGISTERED = 0;
+    
     /**
      * The attributes that are mass assignable.
      *

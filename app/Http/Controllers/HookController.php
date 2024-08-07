@@ -31,6 +31,7 @@ class HookController extends Controller
 
     public function hook()
     {
+
         if(request()->has(['message.text'])) {
             $data = request()->message['text'];
             $from = request()->message['from'];
@@ -50,6 +51,13 @@ class HookController extends Controller
                 $user_id = $from['id'];
                 $method = 'callBackHandler';
             }
+        }
+
+        if(request()->has(['message.contact'])) {
+            $data = request()->message['contact']['phone_number'];
+            $from = request()->message['from'];
+            $user_id = $from['id'];
+            $method = 'contactHandler';
         }
 
         // create user in app

@@ -18,7 +18,7 @@ class BaseCommand
         $this->data = $data;
         $this->url = config('services.telegram.telegram_url').config('services.telegram.token');
         $this->message_chat_id = request()->message['chat']['id'] ?? '';
-        $this->callback_query_chat_id = request()->callback_query['message']['chat']['id'] ?? request()->message['chat']['id'];
+        $this->chat_id = request()->callback_query['message']['chat']['id'] ?? request()->message['chat']['id'];
     }
 
     public function handle()

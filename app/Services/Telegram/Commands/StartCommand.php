@@ -28,7 +28,7 @@ class StartCommand extends BaseCommand
 
         $response = Http::post($this->url . '/sendMessage',
         [
-            'chat_id' => $this->callback_query_chat_id,
+            'chat_id' => $this->chat_id,
             'text' => $message,
             'parse_mode' => 'HTML',
             'reply_markup' => $keyboards,
