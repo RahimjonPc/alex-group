@@ -35,18 +35,5 @@ class ContactSectionCommand extends BaseCommand
             'parse_mode' => 'HTML',
             'reply_markup' => $keyboards,
         ]);
-
-        Log::info($response);
-
-        // $response = Http::attach(
-        //     'photo', Voyager::image($contact->image)
-        // )->post($this->url . '/sendPhoto',
-        // [
-        //     'chat_id' => $this->chat_id,
-        //     'caption' => $contact->phone . ', ' . $contact->email . ', ' . $contact->link,
-        //     'parse_mode' => 'HTML',
-        //     'reply_markup' => $keyboards,
-        // ]);
-
     }
 }

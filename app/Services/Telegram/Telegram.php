@@ -21,6 +21,8 @@ class Telegram
             $className = 'App\\Services\\Telegram\\Commands\\' . $baseName . 'Command';
         } elseif ($user->registered == User::NOT_REGISTERED) {
             $className = 'App\\Services\\Telegram\\Commands\\RegisterCommand';
+        } elseif ($user->registered == User::REGISTERED) {
+            $className = 'App\\Services\\Telegram\\Commands\\PromoCodeCommand';
         }
 
         $class = new $className($data, $user_id);
@@ -37,8 +39,8 @@ class Telegram
             $className = 'App\\Services\\Telegram\\Commands\\ContactSectionCommand';
         } elseif ($data == 'main') {
             $className = 'App\\Services\\Telegram\\Commands\\MainCommand';
-        } elseif ($data == '/map') {
-            $className = 'App\\Services\\Telegram\\Commands\\MapCommand';
+        } elseif ($data == 'promo') {
+            $className = 'App\\Services\\Telegram\\Commands\\PromoCodeCommand';
         } elseif ($data == '/back') {
             $className = 'App\\Services\\Telegram\\Commands\\BackCommand';
         }

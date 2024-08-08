@@ -8,5 +8,9 @@
     "Изменить": "Change",
     "Напишите имя еще раз": "Please enter your name again",
     "Выберите раздел": "Choose section",
-    "Главное меню": "Main section"
+    "Главное меню": "Main section",
+    "Отправьте промокод": "Please send promocode:",
+    "Неверный промокод": "Wrong promocode!",
+    "Промокод сохранен": "Promocode saved succsessfully!",
+    "Промокод уже использован": "Promocode already used!"
 }

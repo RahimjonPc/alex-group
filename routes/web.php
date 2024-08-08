@@ -18,11 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// set hook
 Route::get('set/hook', [HookController::class, 'setHook']);
+
+// delete hook
 Route::get('delete/hook', [HookController::class, 'deleteHook']);
+
+// url for getting response from telegram
 Route::post('hook-x628798uaysr', [HookController::class, 'hook']);
 
 
+// voyager admin panel urls
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
