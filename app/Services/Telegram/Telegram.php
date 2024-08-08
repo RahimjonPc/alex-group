@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use App\Models\User;
-use App\Services\Telegram\Commands\BackCommand;
 
 class Telegram
 {
@@ -41,8 +40,6 @@ class Telegram
             $className = 'App\\Services\\Telegram\\Commands\\MainCommand';
         } elseif ($data == 'promo') {
             $className = 'App\\Services\\Telegram\\Commands\\PromoCodeCommand';
-        } elseif ($data == '/back') {
-            $className = 'App\\Services\\Telegram\\Commands\\BackCommand';
         }
 
         $class = new $className($data, $user);
