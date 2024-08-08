@@ -30,6 +30,7 @@ Route::post('hook-x628798uaysr', [HookController::class, 'hook']);
 
 // export promocodes to exel
 Route::get('used/promocodes/export/', [PromoCodeController::class, 'exportUsedPromoCode'])->name('used_promocodes');
+Route::get('new/promocodes/export/', [PromoCodeController::class, 'exportNewPromoCode'])->name('new_promocodes');
 
 // voyager admin panel urls
 Route::group(['prefix' => 'admin'], function () {

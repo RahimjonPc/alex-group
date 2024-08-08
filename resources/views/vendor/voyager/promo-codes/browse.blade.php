@@ -15,6 +15,9 @@
         <a href="{{ route('used_promocodes') }}" class="btn btn-success btn-add-new">
             <i class="voyager-plus"></i> <span>Скачать использованные промокоды</span>
         </a>
+        <a href="{{ route('new_promocodes') }}" class="btn btn-success btn-add-new">
+            <i class="voyager-plus"></i> <span>Скачать не использованные промокоды</span>
+        </a>
         @can('delete', app($dataType->model_name))
             @include('voyager::partials.bulk-delete')
         @endcan

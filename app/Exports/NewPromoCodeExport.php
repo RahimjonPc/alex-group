@@ -9,7 +9,7 @@ use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
 
-class UsedPromoxCodeExport implements FromQuery, WithHeadings, WithMapping
+class NewPromoCodeExport implements FromQuery, WithHeadings, WithMapping
 {
     use Exportable;
 
@@ -23,13 +23,13 @@ class UsedPromoxCodeExport implements FromQuery, WithHeadings, WithMapping
 
     public function query()
     {
-        return PromoCode::where('status', PromoCode::USED);
+        return PromoCode::where('status', PromoCode::NEW_CODE);
     }
 
     public function map($promocode): array
     {
         return [
-            $promocode->user->name,
+            ' ',
             $promocode->code,
         ];
     }
