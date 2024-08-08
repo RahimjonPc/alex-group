@@ -18,6 +18,11 @@
         <a href="{{ route('new_promocodes') }}" class="btn btn-success btn-add-new">
             <i class="voyager-plus"></i> <span>Скачать не использованные промокоды</span>
         </a>
+        <form action="{{ route('import_promocodes') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <input type="file" name="promocodes" >
+            <button class="btn btn-success btn-add-new" type="submit">Импортировать промокоды</button>
+        </form>
         @can('delete', app($dataType->model_name))
             @include('voyager::partials.bulk-delete')
         @endcan
