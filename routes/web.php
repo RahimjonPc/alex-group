@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HookController;
+use App\Http\Controllers\PromoCodeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,8 @@ Route::get('delete/hook', [HookController::class, 'deleteHook']);
 // url for getting response from telegram
 Route::post('hook-x628798uaysr', [HookController::class, 'hook']);
 
+// export promocodes to exel
+Route::get('used/promocodes/export/', [PromoCodeController::class, 'exportUsedPromoCode'])->name('used_promocodes');
 
 // voyager admin panel urls
 Route::group(['prefix' => 'admin'], function () {

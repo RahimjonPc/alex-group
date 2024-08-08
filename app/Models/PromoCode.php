@@ -13,4 +13,8 @@ class PromoCode extends Model
     const USED = 1;
 
     protected $fillable = ['user_id', 'code', 'status'];
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
 }
