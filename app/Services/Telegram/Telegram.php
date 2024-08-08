@@ -33,10 +33,10 @@ class Telegram
             $className = 'App\\Services\\Telegram\\Commands\\LanguageCommand';
         } elseif ($data == 'change' || $data == 'right') {
             $className = 'App\\Services\\Telegram\\Commands\\RegisterCommand';
-        } elseif ($data == '/installment') {
-            $className = 'App\\Services\\Telegram\\Commands\\InstallmentCommand';
-        } elseif ($data == '/address') {
-            $className = 'App\\Services\\Telegram\\Commands\\AddressCommand';
+        } elseif ($data == 'contacts') {
+            $className = 'App\\Services\\Telegram\\Commands\\ContactSectionCommand';
+        } elseif ($data == 'main') {
+            $className = 'App\\Services\\Telegram\\Commands\\MainCommand';
         } elseif ($data == '/map') {
             $className = 'App\\Services\\Telegram\\Commands\\MapCommand';
         } elseif ($data == '/back') {

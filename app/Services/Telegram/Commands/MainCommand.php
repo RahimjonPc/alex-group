@@ -6,14 +6,10 @@ use Illuminate\Support\Facades\Http;
 use App\Models\User;
 use Illuminate\Support\Facades\Log;
 
-class ContactCommand extends BaseCommand
+class MainCommand extends BaseCommand
 {
     public function handle()
     {
-        $this->user->phone = $this->data;
-        $this->user->registered = User::REGISTERED;
-        $this->user->save();
-
         $message = __('Главное меню');
 
         $keyboards = json_encode([

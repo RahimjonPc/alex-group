@@ -21,3 +21,8 @@ Route::get('/', function () {
 Route::get('set/hook', [HookController::class, 'setHook']);
 Route::get('delete/hook', [HookController::class, 'deleteHook']);
 Route::post('hook-x628798uaysr', [HookController::class, 'hook']);
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
