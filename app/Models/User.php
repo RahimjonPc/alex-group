@@ -14,7 +14,8 @@ class User extends \TCG\Voyager\Models\User
 
     const REGISTERED = 1;
     const NOT_REGISTERED = 0;
-    
+    const SUPER_ADMIN = 1;
+
     /**
      * The attributes that are mass assignable.
      *
